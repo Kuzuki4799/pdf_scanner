@@ -1,0 +1,187 @@
+com/vmb/picker/videoorphoto/tools/StringUtils.java
+ com.vmb.picker.videoorphoto.tools.StringUtils
+com/vmb/picker/videoorphoto/widget/longimage/SkiaImageRegionDecoder.java
+ com.vmb.picker.videoorphoto.widget.longimage.SkiaImageRegionDecoder
+com/vmb/picker/videoorphoto/widget/longimage/SkiaImageDecoder.java
+ com.vmb.picker.videoorphoto.widget.longimage.SkiaImageDecoder
+com/vmb/picker/videoorphoto/config/InstagramSelectionConfig.java
+ com.vmb.picker.videoorphoto.config.InstagramSelectionConfig
+ com.vmb.picker.videoorphoto.config.InstagramSelectionConfig$1
+com/vmb/picker/videoorphoto/app/VMPVideoPhotoPicker.java
+ com.vmb.picker.videoorphoto.app.VMPVideoPhotoPicker
+ com.vmb.picker.videoorphoto.app.VMPVideoPhotoPicker$1
+com/vmb/picker/videoorphoto/glide/ImageCacheUtils.java
+ com.vmb.picker.videoorphoto.glide.ImageCacheUtils
+com/vmb/picker/videoorphoto/widget/longimage/ImageViewState.java
+ com.vmb.picker.videoorphoto.widget.longimage.ImageViewState
+com/vmb/picker/videoorphoto/config/PictureSelectionConfig.java
+ com.vmb.picker.videoorphoto.config.PictureSelectionConfig
+ com.vmb.picker.videoorphoto.config.PictureSelectionConfig$1
+ com.vmb.picker.videoorphoto.config.PictureSelectionConfig$InstanceHolder
+com/vmb/picker/videoorphoto/PictureSelectionModel.java
+ com.vmb.picker.videoorphoto.PictureSelectionModel
+com/vmb/picker/videoorphoto/tools/SdkVersionUtils.java
+ com.vmb.picker.videoorphoto.tools.SdkVersionUtils
+com/vmb/picker/videoorphoto/model/LocalMediaLoader.java
+ com.vmb.picker.videoorphoto.model.LocalMediaLoader
+com/vmb/picker/videoorphoto/entity/MediaData.java
+ com.vmb.picker.videoorphoto.entity.MediaData
+com/vmb/picker/videoorphoto/engine/ImageEngine.java
+ com.vmb.picker.videoorphoto.engine.ImageEngine
+com/vmb/picker/videoorphoto/config/PictureConfig.java
+ com.vmb.picker.videoorphoto.config.PictureConfig
+com/vmb/picker/videoorphoto/camera/listener/TypeListener.java
+ com.vmb.picker.videoorphoto.camera.listener.TypeListener
+com/vmb/picker/videoorphoto/widget/longimage/ImageDecoder.java
+ com.vmb.picker.videoorphoto.widget.longimage.ImageDecoder
+com/vmb/picker/videoorphoto/camera/listener/ClickListener.java
+ com.vmb.picker.videoorphoto.camera.listener.ClickListener
+com/vmb/picker/videoorphoto/entity/LocalMediaFolder.java
+ com.vmb.picker.videoorphoto.entity.LocalMediaFolder
+ com.vmb.picker.videoorphoto.entity.LocalMediaFolder$1
+com/vmb/picker/videoorphoto/PictureVideoPlayActivity.java
+ com.vmb.picker.videoorphoto.PictureVideoPlayActivity
+com/vmb/picker/videoorphoto/glide/GlideEngine.java
+ com.vmb.picker.videoorphoto.glide.GlideEngine
+ com.vmb.picker.videoorphoto.glide.GlideEngine$1
+ com.vmb.picker.videoorphoto.glide.GlideEngine$2
+ com.vmb.picker.videoorphoto.glide.GlideEngine$3
+com/vmb/picker/videoorphoto/glide/GlideCacheEngine.java
+ com.vmb.picker.videoorphoto.glide.GlideCacheEngine
+com/vmb/picker/videoorphoto/adapter/PickerVideoImageGridAdapter.java
+ com.vmb.picker.videoorphoto.adapter.PickerVideoImageGridAdapter
+ com.vmb.picker.videoorphoto.adapter.PickerVideoImageGridAdapter$1
+ com.vmb.picker.videoorphoto.adapter.PickerVideoImageGridAdapter$2
+ com.vmb.picker.videoorphoto.adapter.PickerVideoImageGridAdapter$3
+ com.vmb.picker.videoorphoto.adapter.PickerVideoImageGridAdapter$HeaderViewHolder
+ com.vmb.picker.videoorphoto.adapter.PickerVideoImageGridAdapter$OnPhotoSelectChangedListener
+ com.vmb.picker.videoorphoto.adapter.PickerVideoImageGridAdapter$ViewHolder
+com/vmb/picker/videoorphoto/listener/OnCallbackListener.java
+ com.vmb.picker.videoorphoto.listener.OnCallbackListener
+com/vmb/picker/videoorphoto/widget/longimage/ImageSource.java
+ com.vmb.picker.videoorphoto.widget.longimage.ImageSource
+com/vmb/picker/videoorphoto/tools/ValueOf.java
+ com.vmb.picker.videoorphoto.tools.ValueOf
+com/vmb/picker/videoorphoto/widget/SquareRelativeLayout.java
+ com.vmb.picker.videoorphoto.widget.SquareRelativeLayout
+com/vmb/picker/videoorphoto/style/PictureWindowAnimationStyle.java
+ com.vmb.picker.videoorphoto.style.PictureWindowAnimationStyle
+ com.vmb.picker.videoorphoto.style.PictureWindowAnimationStyle$1
+com/vmb/picker/videoorphoto/PictureSelectorActivity.java
+ com.vmb.picker.videoorphoto.PictureSelectorActivity
+com/vmb/picker/videoorphoto/tools/MediaUtils.java
+ com.vmb.picker.videoorphoto.tools.MediaUtils
+ com.vmb.picker.videoorphoto.tools.MediaUtils$1
+com/vmb/picker/videoorphoto/app/PictureSelectorInstagramStyleActivity.java
+ com.vmb.picker.videoorphoto.app.PictureSelectorInstagramStyleActivity
+com/vmb/picker/videoorphoto/tools/ToastUtils.java
+ com.vmb.picker.videoorphoto.tools.ToastUtils
+com/vmb/picker/videoorphoto/camera/view/TypeButton.java
+ com.vmb.picker.videoorphoto.camera.view.TypeButton
+com/vmb/picker/videoorphoto/tools/DoubleUtils.java
+ com.vmb.picker.videoorphoto.tools.DoubleUtils
+com/vmb/picker/videoorphoto/camera/listener/CaptureListener.java
+ com.vmb.picker.videoorphoto.camera.listener.CaptureListener
+com/vmb/picker/videoorphoto/permissions/PermissionChecker.java
+ com.vmb.picker.videoorphoto.permissions.PermissionChecker
+com/vmb/picker/videoorphoto/camera/listener/CameraListener.java
+ com.vmb.picker.videoorphoto.camera.listener.CameraListener
+com/vmb/picker/videoorphoto/camera/listener/ImageCallbackListener.java
+ com.vmb.picker.videoorphoto.camera.listener.ImageCallbackListener
+com/vmb/picker/videoorphoto/PicturePlayAudioActivity.java
+ com.vmb.picker.videoorphoto.PicturePlayAudioActivity
+com/vmb/picker/videoorphoto/model/LocalMediaPageLoader.java
+ com.vmb.picker.videoorphoto.model.LocalMediaPageLoader
+ com.vmb.picker.videoorphoto.model.LocalMediaPageLoader$1
+ com.vmb.picker.videoorphoto.model.LocalMediaPageLoader$2
+com/vmb/picker/videoorphoto/BuildConfig.java
+ com.vmb.picker.videoorphoto.BuildConfig
+com/vmb/picker/videoorphoto/listener/OnVideoSelectedPlayCallback.java
+ com.vmb.picker.videoorphoto.listener.OnVideoSelectedPlayCallback
+com/vmb/picker/videoorphoto/listener/OnQueryDataResultListener.java
+ com.vmb.picker.videoorphoto.listener.OnQueryDataResultListener
+com/vmb/picker/videoorphoto/style/PictureCropParameterStyle.java
+ com.vmb.picker.videoorphoto.style.PictureCropParameterStyle
+ com.vmb.picker.videoorphoto.style.PictureCropParameterStyle$1
+com/vmb/picker/videoorphoto/widget/longimage/ImageRegionDecoder.java
+ com.vmb.picker.videoorphoto.widget.longimage.ImageRegionDecoder
+com/vmb/picker/videoorphoto/animators/AnimationType.java
+ com.vmb.picker.videoorphoto.animators.AnimationType
+com/vmb/picker/videoorphoto/PictureCustomCameraActivity.java
+ com.vmb.picker.videoorphoto.PictureCustomCameraActivity
+com/vmb/picker/videoorphoto/PictureSelectorWeChatStyleActivity.java
+ com.vmb.picker.videoorphoto.PictureSelectorWeChatStyleActivity
+com/vmb/picker/videoorphoto/entity/LocalMedia.java
+ com.vmb.picker.videoorphoto.entity.LocalMedia
+ com.vmb.picker.videoorphoto.entity.LocalMedia$1
+com/vmb/picker/videoorphoto/style/PictureParameterStyle.java
+ com.vmb.picker.videoorphoto.style.PictureParameterStyle
+ com.vmb.picker.videoorphoto.style.PictureParameterStyle$1
+com/vmb/picker/videoorphoto/listener/OnImageCompleteCallback.java
+ com.vmb.picker.videoorphoto.listener.OnImageCompleteCallback
+com/vmb/picker/videoorphoto/camera/view/ReturnButton.java
+ com.vmb.picker.videoorphoto.camera.view.ReturnButton
+com/vmb/picker/videoorphoto/thread/PictureThreadUtils.java
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$1
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$2
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$3
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$LinkedBlockingQueue4Util
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$SimpleTask
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$Task
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$Task$1
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$Task$2
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$Task$3
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$Task$4
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$Task$5
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$Task$OnTimeoutListener
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$TaskInfo
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$ThreadPoolExecutor4Util
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$UtilsThreadFactory
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$UtilsThreadFactory$1
+ com.vmb.picker.videoorphoto.thread.PictureThreadUtils$UtilsThreadFactory$2
+com/vmb/picker/videoorphoto/listener/OnResultCallbackListener.java
+ com.vmb.picker.videoorphoto.listener.OnResultCallbackListener
+com/vmb/picker/videoorphoto/config/PictureMimeType.java
+ com.vmb.picker.videoorphoto.config.PictureMimeType
+com/vmb/picker/videoorphoto/PictureSelectorCameraEmptyActivity.java
+ com.vmb.picker.videoorphoto.PictureSelectorCameraEmptyActivity
+com/vmb/picker/videoorphoto/widget/longimage/SubsamplingScaleImageView.java
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$1
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$2
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$Anim
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$AnimationBuilder
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$BitmapLoadTask
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$DefaultOnAnimationEventListener
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$DefaultOnImageEventListener
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$DefaultOnStateChangedListener
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$OnAnimationEventListener
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$OnImageEventListener
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$OnStateChangedListener
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$ScaleAndTranslate
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$Tile
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$TileLoadTask
+ com.vmb.picker.videoorphoto.widget.longimage.SubsamplingScaleImageView$TilesInitTask
+com/vmb/picker/videoorphoto/widget/longimage/CompatDecoderFactory.java
+ com.vmb.picker.videoorphoto.widget.longimage.CompatDecoderFactory
+com/vmb/picker/videoorphoto/PictureFileProvider.java
+ com.vmb.picker.videoorphoto.PictureFileProvider
+com/vmb/picker/videoorphoto/tools/DateUtils.java
+ com.vmb.picker.videoorphoto.tools.DateUtils
+com/vmb/picker/videoorphoto/tools/PictureFileUtils.java
+ com.vmb.picker.videoorphoto.tools.PictureFileUtils
+com/vmb/picker/videoorphoto/camera/CheckPermission.java
+ com.vmb.picker.videoorphoto.camera.CheckPermission
+com/vmb/picker/videoorphoto/PictureExternalPreviewActivity.java
+ com.vmb.picker.videoorphoto.PictureExternalPreviewActivity
+com/vmb/picker/videoorphoto/listener/OnCustomCameraInterfaceListener.java
+ com.vmb.picker.videoorphoto.listener.OnCustomCameraInterfaceListener
+com/vmb/picker/videoorphoto/widget/longimage/DecoderFactory.java
+ com.vmb.picker.videoorphoto.widget.longimage.DecoderFactory
+com/vmb/picker/videoorphoto/PictureSelector.java
+ com.vmb.picker.videoorphoto.PictureSelector
+com/vmb/picker/videoorphoto/engine/CacheResourcesEngine.java
+ com.vmb.picker.videoorphoto.engine.CacheResourcesEngine
+com/vmb/picker/videoorphoto/app/VMBGallery.java
+ com.vmb.picker.videoorphoto.app.VMBGallery

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical"
+    tools:context=".ui.SettingPDFActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60dp"
+        android:background="@drawable/bg_white">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/dimen_40dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:src="@drawable/ic_back"
+            app:tint="@android:color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textNormalBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_toEndOf="@+id/imgBack"
+            android:text="@string/pdf_settings"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_blur" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:padding="@dimen/dimen_15dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textNormalBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/size_page_pdf"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <Spinner
+            android:id="@+id/spinnerPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_15dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textNormalBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/orientation_page_pdf"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <Spinner
+            android:id="@+id/spinnerOrientation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

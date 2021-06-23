@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlTool"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/bg_border_tool"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_20dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:src="@drawable/ic_close" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textNormalBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/watermark"
+            android:textColor="@android:color/white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgDone"
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_done" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/textNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:text="@string/content"
+        android:textColor="@color/gnt_gray"
+        android:textSize="@dimen/text_size_12sp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edWatermark"
+        style="@style/textNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:text="@string/watermark"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/gnt_gray" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/textNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:text="@string/size"
+        android:textColor="@color/gnt_gray"
+        android:textSize="@dimen/text_size_12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/margin_10dp">
+
+        <SeekBar
+            android:id="@+id/seek_bar_size"
+            style="@style/textNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:layout_toStartOf="@+id/txtPercentSize"
+            android:hint="@string/watermark"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:progress="20"
+            android:progressBackgroundTint="@color/gnt_gray"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/gnt_gray" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPercentSize"
+            style="@style/textNormalWhite"
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="end"
+            android:text="20"
+            android:textSize="@dimen/text_size_15sp" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/textNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:text="@string/alpha"
+        android:textColor="@color/gnt_gray"
+        android:textSize="@dimen/text_size_12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/margin_10dp">
+
+        <SeekBar
+            android:id="@+id/seek_bar_alpha"
+            style="@style/textNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:layout_toStartOf="@+id/txtPercentAlpha"
+            android:hint="@string/watermark"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:progress="100"
+            android:progressBackgroundTint="@color/gnt_gray"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/gnt_gray" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPercentAlpha"
+            style="@style/textNormalWhite"
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="100%"
+            android:textSize="@dimen/text_size_15sp" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/textNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:text="@string/color"
+        android:textColor="@color/gnt_gray"
+        android:textSize="@dimen/text_size_12sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewColor"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_height="@dimen/dimen_60dp"
+        android:layout_marginBottom="@dimen/margin_10dp" />
+</LinearLayout>

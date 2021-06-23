@@ -1,0 +1,5 @@
+rootProject.name = "Pdf Scanner"
+include ':app'
+include ':libs_photo_picker'
+include ':smart_cropper'
+include ':photo_editor'

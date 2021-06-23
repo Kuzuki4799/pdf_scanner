@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ui.ResultActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60dp"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/textNormalBold"
+            android:layout_width="@dimen/dimen_40dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:padding="@dimen/margin_5dp"
+            android:src="@drawable/ic_home"
+            app:tint="@android:color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtDone"
+            style="@style/textNormalBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:text="@string/done"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_blur" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dimen_120dp"
+        android:layout_height="@dimen/dimen_150dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:background="@drawable/bg_border_gray" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtName"
+        style="@style/textNormalBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:drawableEnd="@drawable/ic_edit"
+        android:drawablePadding="@dimen/margin_10dp"
+        android:text="@string/more_apps"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_18sp"
+        app:drawableTint="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAddPage"
+            style="@style/textNormalBold"
+            android:layout_width="@dimen/dimen_120dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:background="@drawable/item_border_gray"
+            android:text="@string/add_page"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <Button
+            android:id="@+id/btnShare"
+            style="@style/textNormalBold"
+            android:layout_width="@dimen/dimen_120dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginStart="@dimen/dimen_50dp"
+            android:background="@drawable/item_border_color_active"
+            android:text="@string/share"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_size_15sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_toStartOf="@+id/txtCenter"
+            android:background="@color/gray_blur" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCenter"
+            style="@style/textNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/features"
+            android:textSize="@dimen/dimen_13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_toEndOf="@id/txtCenter"
+            android:background="@color/gray_blur" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPdfPreview"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_pdf"
+            android:gravity="center"
+            android:text="@string/pdf_preview"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_10sp"
+            app:drawableTint="@color/colorPrimary" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtEmail"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_baseline_email"
+            android:gravity="center"
+            android:text="@string/email"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_10sp"
+            app:drawableTint="@color/colorPrimary" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSignature"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_text"
+            android:gravity="center"
+            android:text="@string/signature"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_10sp"
+            app:drawableTint="@color/colorPrimary" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtWatermark"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_paint"
+            android:gravity="center"
+            android:text="@string/watermark"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_10sp"
+            app:drawableTint="@color/colorPrimary" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="config_slideWindowAnimation">300</integer>
+
+    <!-- Common attributes -->
+    <attr name="corner_radius" format="float" />
+    <attr name="is_circle" format="boolean" />
+    <attr name="min_value" format="float" />
+    <attr name="max_value" format="float" />
+    <attr name="min_start_value" format="float" />
+    <attr name="max_start_value" format="float" />
+    <attr name="steps" format="float" />
+    <attr name="gap" format="float" />
+    <attr name="fix_gap" format="float" />
+    <attr name="bar_color_mode" format="enum">
+        <enum name="solid" value="0" />
+        <enum name="gradient" value="1" />
+    </attr>
+    <attr name="bar_color" format="color" />
+    <attr name="bar_gradient_start" format="color" />
+    <attr name="bar_gradient_end" format="color" />
+    <attr name="bar_highlight_color_mode" format="enum">
+        <enum name="solid" value="0" />
+        <enum name="gradient" value="1" />
+    </attr>
+    <attr name="bar_highlight_color" format="color" />
+    <attr name="bar_highlight_gradient_start" format="color" />
+    <attr name="bar_highlight_gradient_end" format="color" />
+    <attr name="thumb_diameter" format="dimension" />
+    <attr name="position" format="enum">
+        <enum name="left" value="0" />
+        <enum name="right" value="1" />
+    </attr>
+    <attr name="data_type" format="enum">
+        <enum name="_long" value="0" />
+        <enum name="_double" value="1" />
+        <enum name="_integer" value="2" />
+        <enum name="_float" value="3" />
+        <enum name="_short" value="4" />
+        <enum name="_byte" value="5" />
+    </attr>
+    <attr name="bar_height" format="dimension" />
+    <attr name="seek_bar_touch_enabled" format="boolean" />
+
+    <declare-styleable name="CRangeSeekBar">
+        <attr name="minValue" format="float" />
+        <attr name="maxValue" format="float" />
+        <attr name="stepValue" format="float" />
+        <attr name="valueType">
+            <enum name="intType" value="6" />
+            <enum name="floatType" value="7" />
+        </attr>
+
+        <!-- ready -->
+        <attr name="enableGradient" format="boolean" />
+        <attr name="textColor" format="color" />
+
+        <attr name="showThumbsText">
+            <enum name="none" value="0" />
+            <enum name="below" value="1" />
+            <enum name="above" value="2" />
+            <enum name="center" value="3" />
+        </attr>
+
+        <attr name="thumbsTextMargin" format="dimension" />
+        <attr name="additionalTextMargin" format="dimension" />
+
+        <attr name="showAdditionalText">
+            <enum name="none" value="0" />
+            <enum name="below" value="1" />
+            <enum name="above" value="2" />
+            <enum name="center" value="3" />
+        </attr>
+
+        <attr name="roundedCorners" format="boolean" />
+        <attr name="barHeight" format="dimension" />
+
+        <attr name="active" format="boolean" />
+
+        <attr name="textFont" format="reference" />
+        <attr name="textSize" format="dimension" />
+
+        <attr name="centerText" format="string" />
+        <attr name="rightText" format="string" />
+        <attr name="leftText" format="string" />
+
+        <attr name="thumbsNormal" format="reference" />
+        <attr name="thumbsPressed" format="reference" />
+        <attr name="thumbsDisabled" format="reference" />
+
+        <attr name="sideColor" format="color" />
+        <attr name="transitionColor" format="color" />
+        <attr name="centerColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="RangeProgressBar">
+        <attr name="android:progressDrawable" />
+        <attr name="android:minWidth" />
+        <attr name="android:maxWidth" />
+        <attr name="android:minHeight" />
+        <attr name="android:maxHeight" />
+        <attr name="android:max" />
+        <attr name="android:progressTint" />
+        <attr name="android:progressTintMode" />
+        <attr name="android:progressBackgroundTint" />
+        <attr name="android:progressBackgroundTintMode" />
+        <attr name="android:interpolator" />
+        <attr name="range_progress_offset" format="dimension" />
+        <attr name="range_progress_startValue" format="integer" />
+        <attr name="range_progress_endValue" format="integer" />
+        <attr name="range_progress_startEnd_minDiff" format="integer" />
+        <attr name="range_progress_startMaxValue" format="integer" />
+        <attr name="range_progress_endMinValue" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="RangeSeekBar">
+        <attr name="android:thumb" />
+        <attr name="range_seekbar_leftThumb" format="reference" />
+        <attr name="range_seekbar_rightThumb" format="reference" />
+        <attr name="range_seekbar_useDisabledAlpha" format="boolean" />
+        <attr name="range_seekbar_stepSize" format="integer" />
+        <attr name="range_seekbar_thumbInset" format="dimension" />
+        <attr name="android:thumbOffset" />
+        <attr name="android:splitTrack" />
+        <attr name="android:thumbTint" />
+        <attr name="android:thumbTintMode" />
+        <attr name="android:tickMark" />
+        <attr name="android:tickMarkTint" />
+        <attr name="android:tickMarkTintMode" />
+    </declare-styleable>
+
+    <declare-styleable name="ArcProgress">
+        <attr name="arc_progress" format="integer"/>
+        <attr name="arc_angle" format="float"/>
+        <attr name="arc_stroke_width" format="dimension"/>
+        <attr name="arc_max" format="integer"/>
+
+        <attr name="arc_unfinished_color" format="color"/>
+        <attr name="arc_finished_color" format="color"/>
+
+        <attr name="arc_text_size" format="dimension"/>
+        <attr name="arc_text_color" format="color"/>
+
+        <attr name="arc_suffix_text" format="string"/>
+        <attr name="arc_suffix_text_size" format="dimension"/>
+        <attr name="arc_suffix_text_padding" format="dimension"/>
+
+        <attr name="arc_bottom_text" format="string"/>
+        <attr name="arc_bottom_text_size" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+</resources>

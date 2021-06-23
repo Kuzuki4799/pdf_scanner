@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "966814760704",
+    "project_id": "tutorial-28eb3",
+    "storage_bucket": "tutorial-28eb3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966814760704:android:fb55cbc33c4690b08bbde5",
+        "android_client_info": {
+          "package_name": "com.shockwave.pdf_scaner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966814760704-mt4khj55cipe38mqd8skja0f66j1go7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlPAkLR5tBpRftu-E-TrrxhvCVdqRQM-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "966814760704-mt4khj55cipe38mqd8skja0f66j1go7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "966814760704-1529ap57tmq1ou5kcc1puv49o50eijmt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.thent.tutorial.location"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966814760704:android:e71323f9003a52db8bbde5",
+        "android_client_info": {
+          "package_name": "com.thent.pdfscanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966814760704-mt4khj55cipe38mqd8skja0f66j1go7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlPAkLR5tBpRftu-E-TrrxhvCVdqRQM-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "966814760704-mt4khj55cipe38mqd8skja0f66j1go7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "966814760704-1529ap57tmq1ou5kcc1puv49o50eijmt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.thent.tutorial.location"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966814760704:android:34ad83f930739ad28bbde5",
+        "android_client_info": {
+          "package_name": "com.thent.tutorial.ChatFirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966814760704-mt4khj55cipe38mqd8skja0f66j1go7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlPAkLR5tBpRftu-E-TrrxhvCVdqRQM-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "966814760704-mt4khj55cipe38mqd8skja0f66j1go7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "966814760704-1529ap57tmq1ou5kcc1puv49o50eijmt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.thent.tutorial.location"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

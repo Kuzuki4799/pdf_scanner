@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/frmBorder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_border_tv">
+
+        <TextView
+            android:id="@+id/tvPhotoEditorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="5dp"
+            android:text="ghhsadhadasdasdh" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgPhotoEditorClose"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|start"
+        android:elevation="1dp"
+        android:src="@drawable/ic_x_remove" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgPhotoEditorEdit"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|end"
+        android:elevation="1dp"
+        android:src="@drawable/ic_pencil" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgPhotoEditorReset"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="bottom|end"
+        android:elevation="1dp"
+        android:src="@drawable/ic_flip" />
+</FrameLayout>
