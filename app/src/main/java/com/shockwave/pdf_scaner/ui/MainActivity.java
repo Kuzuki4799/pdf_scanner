@@ -61,11 +61,11 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     @Override
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
         if (item.getItemId() == R.id.navigation_file) {
-            viewPager.setCurrentItem(0);
+            viewPager.setCurrentItem(0, false);
         } else {
-            viewPager.setCurrentItem(1);
+            viewPager.setCurrentItem(1, false);
         }
-        return false;
+        return true;
     }
 
     private void handlerViewPager() {

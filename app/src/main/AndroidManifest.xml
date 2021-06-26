@@ -25,7 +25,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.ResultActivity"></activity>
+        <activity android:name=".ui.ResultActivity"/>
         <activity
             android:name=".ui.MainActivity"
             android:screenOrientation="portrait">
@@ -62,6 +62,9 @@
         <activity
             android:name=".ui.SettingPDFActivity"
             android:screenOrientation="portrait" />
+
+        <activity android:name=".ui.setting.PageSizeActivity"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -15,7 +15,7 @@ public class SaveSettings {
     private Bitmap.CompressFormat compressFormat;
     private int compressQuality;
 
-    boolean isTransparencyEnabled() {
+    public boolean isTransparencyEnabled() {
         return isTransparencyEnabled;
     }
 
@@ -23,11 +23,11 @@ public class SaveSettings {
         return isClearViewsEnabled;
     }
 
-    Bitmap.CompressFormat getCompressFormat() {
+    public Bitmap.CompressFormat getCompressFormat() {
         return compressFormat;
     }
 
-    int getCompressQuality() {
+    public int getCompressQuality() {
         return compressQuality;
     }
 

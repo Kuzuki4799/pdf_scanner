@@ -197,4 +197,15 @@
     <string name="features">Features</string>
     <string name="pdf_preview">PDF Preview</string>
     <string name="email">Email</string>
+    <string name="pdf_page_size">PDF page size</string>
+    <string name="cm">cm</string>
+    <string name="a3">A3</string>
+    <string name="a4">A4</string>
+    <string name="a5">A5</string>
+    <string name="b4">B4</string>
+    <string name="b5">B5</string>
+    <string name="letter">Letter</string>
+    <string name="legal">Legal</string>
+    <string name="executive">Executive</string>
+    <string name="business_card">Business Card</string>
 </resources>

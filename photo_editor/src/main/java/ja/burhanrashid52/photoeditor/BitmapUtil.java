@@ -18,14 +18,14 @@ import javax.microedition.khronos.opengles.GL10;
  * @version 0.1.2
  * @since 5/21/2018
  */
-class BitmapUtil {
+public class BitmapUtil {
     /**
      * Remove transparency in edited bitmap
      *
      * @param source edited image
      * @return bitmap without any transparency
      */
-    static Bitmap removeTransparency(Bitmap source) {
+    public static Bitmap removeTransparency(Bitmap source) {
         int firstX = 0, firstY = 0;
         int lastX = source.getWidth();
         int lastY = source.getHeight();
