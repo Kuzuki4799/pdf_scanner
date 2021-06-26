@@ -1,15 +1,21 @@
 package com.shockwave.pdf_scaner.ui;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.itextpdf.text.BadElementException;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.pdf.PdfWriter;
 import com.shockwave.pdf_scaner.R;
 import com.shockwave.pdf_scaner.adapter.FilterViewAdapter;
 import com.shockwave.pdf_scaner.adapter.ListImagePagerAdapter;
@@ -21,12 +27,23 @@ import com.shockwave.pdf_scaner.util.ParamUtils;
 import com.shockwave.pdf_scaner.util.RecyclerUtils;
 import com.shockwave.pdf_scaner.util.SPUtils;
 import com.shockwave.pdf_scaner.widget.DisableSwipeViewPager;
+import com.watermark.androidwm.utils.Constant;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 
-import ja.burhanrashid52.photoeditor.PhotoEditor;
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 import ja.burhanrashid52.photoeditor.PhotoFilter;
 
 public class EditImageActivity extends BaseActivity implements View.OnClickListener {
@@ -161,25 +178,43 @@ public class EditImageActivity extends BaseActivity implements View.OnClickListe
                 startActivity(new Intent(this, SettingPDFActivity.class));
                 break;
             case R.id.imgDone:
-                showProgressDialog();
-                ArrayList<String> pathDone = new ArrayList<>();
-                for (int i = 0; i < listImage.size(); i++) {
-                    int finalI = i;
-                    listImagePagerAdapter.getImage(viewPager.findViewWithTag("BasePaperAdapter" + i), new PhotoEditor.OnSaveListener() {
-                        @Override
-                        public void onSuccess(@NonNull @NotNull String imagePath) {
-                            pathDone.add(imagePath);
-                            if (finalI == listImage.size() - 1) dismissProgressDialog();
-                        }
-
-                        @Override
-                        public void onFailure(@NonNull @NotNull Exception exception) {
-
-                        }
-                    });
-                }
+                exportPDF();
                 break;
         }
+    }
+
+    @SuppressLint("CheckResult")
+    private void exportPDF() {
+        showProgressDialog();
+        Observable.just(listImagePagerAdapter.saveImage(viewPager))
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread()).subscribe(files -> {
+            System.out.println("FUKKKKKKKK" + files);
+            Observable.just(listImagePagerAdapter.convertPDF(files))
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(new Observer<Boolean>() {
+                        @Override
+                        public void onSubscribe(@NotNull Disposable d) {
+
+                        }
+
+                        @Override
+                        public void onNext(@NotNull Boolean aBoolean) {
+                            System.out.println("FUKKKKKKKK" + aBoolean);
+                        }
+
+                        @Override
+                        public void onError(@NotNull Throwable e) {
+                            dismissProgressDialog();
+                        }
+
+                        @Override
+                        public void onComplete() {
+                            dismissProgressDialog();
+                        }
+                    });
+        });
     }
 
     @Override

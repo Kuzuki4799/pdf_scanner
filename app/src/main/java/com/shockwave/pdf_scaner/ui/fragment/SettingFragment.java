@@ -1,5 +1,6 @@
 package com.shockwave.pdf_scaner.ui.fragment;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Spinner;
 
@@ -7,9 +8,10 @@ import androidx.appcompat.widget.AppCompatTextView;
 
 import com.shockwave.pdf_scaner.R;
 import com.shockwave.pdf_scaner.base.BaseFragment;
+import com.shockwave.pdf_scaner.ui.setting.PageSizeActivity;
 import com.shockwave.pdf_scaner.util.ParamUtils;
 
-public class SettingFragment extends BaseFragment implements View.OnClickListener{
+public class SettingFragment extends BaseFragment implements View.OnClickListener {
 
     private Spinner spPageSize;
     private AppCompatTextView txtLocation;
@@ -47,6 +49,7 @@ public class SettingFragment extends BaseFragment implements View.OnClickListene
         txtShare.setOnClickListener(this);
         txtFeedback.setOnClickListener(this);
         txtPolicy.setOnClickListener(this);
+        getView().findViewById(R.id.rl_page_size).setOnClickListener(this);
     }
 
     @Override
@@ -61,6 +64,9 @@ public class SettingFragment extends BaseFragment implements View.OnClickListene
             case R.id.txtFeedback:
                 break;
             case R.id.txtPolicy:
+                break;
+            case R.id.rl_page_size:
+                startActivity(new Intent(requireActivity(), PageSizeActivity.class));
                 break;
         }
     }

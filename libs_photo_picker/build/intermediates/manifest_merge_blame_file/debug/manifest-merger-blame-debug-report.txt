@@ -6,28 +6,28 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->/Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
+8-->/Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->/Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
+9-->/Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
 10
 11    <application>
-11-->/Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:5:5-15:19
+11-->/Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:5:5-15:19
 12        <provider
-12-->/Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:6:9-14:20
+12-->/Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:6:9-14:20
 13            android:name="com.vmb.picker.videoorphoto.PictureFileProvider"
-13-->/Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:7:13-48
+13-->/Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:7:13-48
 14            android:authorities="${applicationId}.provider"
-14-->/Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:8:13-60
+14-->/Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:8:13-60
 15            android:exported="false"
-15-->/Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:9:13-37
+15-->/Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:9:13-37
 16            android:grantUriPermissions="true" >
-16-->/Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:10:13-47
+16-->/Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:10:13-47
 17            <meta-data
-17-->/Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:11:13-13:54
+17-->/Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:11:13-13:54
 18                android:name="android.support.FILE_PROVIDER_PATHS"
-18-->/Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:12:17-67
+18-->/Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:12:17-67
 19                android:resource="@xml/file_paths" />
-19-->/Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:13:17-51
+19-->/Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:13:17-51
 20        </provider>
 21    </application>
 22

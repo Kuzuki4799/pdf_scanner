@@ -77,6 +77,14 @@ public class FileUtils {
         }
     }
 
+    public static File outMediaFilePDF() throws IOException {
+        File storageDir = new File(PDF_FOLDER);
+        if (!storageDir.exists()) storageDir.mkdirs();
+        File file = File.createTempFile(nameOffer(), ".pdf", storageDir);
+        if (!file.exists()) file.mkdirs();
+        return file;
+    }
+
 
     public static String readableFileSize(long size) {
         if (size <= 0) return "0";

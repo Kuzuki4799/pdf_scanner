@@ -13,24 +13,36 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.pdf.PdfWriter;
 import com.shockwave.pdf_scaner.R;
 import com.shockwave.pdf_scaner.util.FileUtils;
 import com.shockwave.pdf_scaner.util.ParamUtils;
+import com.shockwave.pdf_scaner.widget.DisableSwipeViewPager;
 import com.watermark.androidwm.WatermarkBuilder;
 import com.watermark.androidwm.bean.WatermarkText;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.Closeable;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 
+import ja.burhanrashid52.photoeditor.BitmapUtil;
 import ja.burhanrashid52.photoeditor.PhotoEditor;
 import ja.burhanrashid52.photoeditor.PhotoEditorView;
 import ja.burhanrashid52.photoeditor.PhotoFilter;
 import ja.burhanrashid52.photoeditor.SaveSettings;
 import ja.burhanrashid52.photoeditor.ViewType;
+
+import static com.shockwave.pdf_scaner.util.FileUtils.outMediaFilePDF;
 
 public class ListImagePagerAdapter extends PagerAdapter {
 
@@ -111,6 +123,78 @@ public class ListImagePagerAdapter extends PagerAdapter {
             File createFile = FileUtils.createOfferMoreFile(view.getContext(), false, ParamUtils.jpgExtension);
             mPhotoEditor.clearHelperBox();
             mPhotoEditor.saveAsFile(createFile.getPath(), saveSettings, callback);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @SuppressLint("MissingPermission")
+    public ArrayList<File> saveImage(DisableSwipeViewPager viewPager) {
+        FileOutputStream out = null;
+        ArrayList<File> listPath = new ArrayList<>();
+        try {
+            SaveSettings saveSettings = new SaveSettings.Builder().setClearViewsEnabled(false).setTransparencyEnabled(true).build();
+            for (int i = 0; i < listImage.size(); i++) {
+                PhotoEditorView photoEditorView = viewPager.getChildAt(i).findViewById(R.id.imgMain);
+                PhotoEditor mPhotoEditor = new PhotoEditor.Builder(viewPager.getContext(), photoEditorView).setPinchTextScalable(true).build();
+                File createFile = FileUtils.createOfferMoreFile(viewPager.getContext(), false, ParamUtils.jpgExtension);
+                mPhotoEditor.clearHelperBox();
+                String path = createFile.getPath();
+                File file = new File(path);
+                try {
+                    out = new FileOutputStream(file, false);
+                    photoEditorView.setDrawingCacheEnabled(true);
+                    Bitmap drawingCache = saveSettings.isTransparencyEnabled()
+                            ? BitmapUtil.removeTransparency(photoEditorView.getDrawingCache())
+                            : photoEditorView.getDrawingCache();
+                    drawingCache.compress(saveSettings.getCompressFormat(), saveSettings.getCompressQuality(), out);
+                    if (drawingCache.getByteCount() > 0) {
+                        listPath.add(file);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            return listPath;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            closeFileStream(out);
+        }
+        return null;
+    }
+
+    public Boolean convertPDF(ArrayList<File> files) {
+        Document document = new Document(PageSize.A4, 38.0f, 38.0f, 50.0f, 38.0f);
+        try {
+            File outputMediaFile = outMediaFilePDF();
+            System.out.println("KKKKKKKKKK" + outputMediaFile);
+            PdfWriter.getInstance(document, new FileOutputStream(outputMediaFile));
+            document.open();
+            for (int i = 0; i < files.size(); i++) {
+                Image image = Image.getInstance(files.get(i).getAbsolutePath());
+                float scaler = ((document.getPageSize().getWidth() - document.leftMargin()
+                        - document.rightMargin() - 0) / image.getWidth()) * 100;
+                image.scalePercent(scaler);
+                image.setAlignment(Image.ALIGN_CENTER | Image.ALIGN_TOP);
+                image.setAbsolutePosition((document.getPageSize().getWidth() - image.getScaledWidth()) / 2.0f,
+                        (document.getPageSize().getHeight() - image.getScaledHeight()) / 2.0f);
+                document.add(image);
+                document.newPage();
+            }
+            return true;
+        } catch (DocumentException | IOException e) {
+            e.printStackTrace();
+        } finally {
+            document.close();
+        }
+        return false;
+    }
+
+    private void closeFileStream(Closeable closeable) {
+        if (closeable == null) return;
+        try {
+            closeable.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
