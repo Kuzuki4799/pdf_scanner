@@ -81,10 +81,10 @@ public class CropImageActivity extends BaseActivity implements View.OnClickListe
         imgBack.setOnClickListener(this);
         txtNext.setOnClickListener(this);
         txtNoCut.setOnClickListener(this);
-        txtCapAgainOrLeft.setOnClickListener(this);
         txtRotate.setOnClickListener(this);
         imgDelete.setOnClickListener(this);
         viewPager.setOnPageChangeListener(this);
+        txtCapAgainOrLeft.setOnClickListener(this);
     }
 
     private void isAutoCut() {

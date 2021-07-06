@@ -53,11 +53,12 @@
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_14sp" />
 
-        <Spinner
-            android:id="@+id/spinnerPdf"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPageSize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:drawableEnd="@drawable/ic_down" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -73,10 +74,11 @@
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_14sp" />
 
-        <Spinner
-            android:id="@+id/spinnerOrientation"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPageOrientation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:drawableEnd="@drawable/ic_down" />
     </RelativeLayout>
 </LinearLayout>

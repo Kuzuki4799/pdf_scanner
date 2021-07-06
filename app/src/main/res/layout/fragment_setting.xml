@@ -60,7 +60,7 @@
                 style="@style/textNormalBold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@+id/spPageSize"
+                android:layout_toStartOf="@+id/txtPageSize"
                 android:drawableStart="@drawable/ic_file"
                 android:drawablePadding="@dimen/margin_10dp"
                 android:text="@string/page_pdf_size"
@@ -68,10 +68,11 @@
                 android:textSize="@dimen/dimen_13sp"
                 app:drawableTint="@android:color/darker_gray" />
 
-            <Spinner
-                android:id="@+id/spPageSize"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtPageSize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_down"
                 android:layout_alignParentEnd="true" />
         </RelativeLayout>
 

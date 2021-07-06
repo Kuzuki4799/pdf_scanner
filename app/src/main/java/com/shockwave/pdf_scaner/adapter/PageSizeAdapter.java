@@ -1,6 +1,5 @@
-package com.shockwave.pdf_scaner.ui.setting;
+package com.shockwave.pdf_scaner.adapter;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,30 +10,30 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.shockwave.pdf_scaner.R;
-import com.shockwave.pdf_scaner.adapter.AlbumAdapter;
 import com.shockwave.pdf_scaner.base.BaseRecyclerAdapter;
-import com.shockwave.pdf_scaner.model.PageSize;
-import com.shockwave.pdf_scaner.model.PhotoDirectory;
-import com.shockwave.pdf_scaner.util.FormatUtils;
+import com.shockwave.pdf_scaner.model.PageModel;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
+import java.util.ArrayList;
 
-public class PageSizeAdapter extends BaseRecyclerAdapter<PageSize, PageSizeAdapter.ViewHolder> {
+public class PageSizeAdapter extends BaseRecyclerAdapter<PageModel, PageSizeAdapter.ViewHolder> {
 
-    public PageSizeAdapter(Context context, List<PageSize> list) {
+    public PageSizeAdapter(Context context, ArrayList<PageModel> list) {
         super(context, list);
     }
 
-    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        PageSize item = getItembyPostion(position);
-        holder.title.setText(PageSizeManager.getTitle(mContext, item));
-        holder.size.setText(FormatUtils.formatPageSize(item.width * 0.1f, 1)
-                + " x " + FormatUtils.formatPageSize(item.height * 0.1f, 1)
-                + ' ' + mContext.getString(R.string.cm));
+        PageModel item = getItembyPostion(position);
+        holder.title.setText(item.name);
+        holder.size.setText(item.detail);
+
+        if (item.isSelected) {
+            holder.checkbox.setImageResource(R.drawable.ic_pdf_size_selected);
+        } else {
+            holder.checkbox.setImageResource(R.drawable.ic_pdf_size_unselected);
+        }
     }
 
     @Override
@@ -53,6 +52,12 @@ public class PageSizeAdapter extends BaseRecyclerAdapter<PageSize, PageSizeAdapt
             checkbox = itemView.findViewById(R.id.iv_selected_state);
             title = itemView.findViewById(R.id.tv_size);
             size = itemView.findViewById(R.id.tv_size_wh);
+
+            itemView.setOnClickListener(v -> {
+                if (onItemClickListener != null) {
+                    onItemClickListener.onItemClick(getAdapterPosition());
+                }
+            });
         }
     }
 }

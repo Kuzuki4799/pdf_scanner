@@ -1,55 +1,55 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
-INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
-INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
-INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
-INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
-INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
-INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
+ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
 	package
-		ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:11-48
-		INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
-		INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
+		ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:11-48
+		INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
+		INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
-		ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
-		INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
+		INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
+		ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
+		INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
-		ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
-		INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
+		INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
+		ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:2:1-16:12
+		INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:3:5-63
+		ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:3:5-63
 application
-ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:5:5-15:19
+ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:5:5-15:19
 provider#com.vmb.picker.videoorphoto.PictureFileProvider
-ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:6:9-14:20
+ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:6:9-14:20
 	android:grantUriPermissions
-		ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:10:13-47
+		ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:10:13-47
 	android:authorities
-		ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:8:13-60
+		ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:8:13-60
 	android:exported
-		ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:9:13-37
+		ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:9:13-37
 	android:name
-		ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:7:13-48
+		ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:7:13-48
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:11:13-13:54
+ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:11:13-13:54
 	android:resource
-		ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:13:17-51
+		ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:13:17-51
 	android:name
-		ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml:12:17-67
+		ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml:12:17-67
 uses-sdk
-INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
-INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
-INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
-INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
+INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
+INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
+INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
+INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
-		ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
-		INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
+		INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
+		ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
+		INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
-		ADDED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
-		INJECTED from /Users/lapdv/OUTSOURCE/pdf_scanner/libs_photo_picker/src/main/AndroidManifest.xml
+		INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
+		ADDED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml
+		INJECTED from /Users/nguyentrithe/Desktop/android/mind/Pdf_Scanner/libs_photo_picker/src/main/AndroidManifest.xml

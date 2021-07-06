@@ -62,8 +62,10 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
         if (item.getItemId() == R.id.navigation_file) {
             viewPager.setCurrentItem(0, false);
+            fabCamera.setVisibility(View.VISIBLE);
         } else {
             viewPager.setCurrentItem(1, false);
+            fabCamera.setVisibility(View.GONE);
         }
         return true;
     }

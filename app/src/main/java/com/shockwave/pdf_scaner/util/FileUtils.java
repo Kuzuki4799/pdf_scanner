@@ -46,7 +46,7 @@ public class FileUtils {
     }
 
     public static String nameOffer() {
-        return new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+        return new SimpleDateFormat(dayFormat, Locale.getDefault()).format(new Date());
     }
 
     public static File createMoreFile(Context context, int format, boolean isFolder, String extension) throws IOException {

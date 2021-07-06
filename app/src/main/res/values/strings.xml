@@ -208,4 +208,6 @@
     <string name="legal">Legal</string>
     <string name="executive">Executive</string>
     <string name="business_card">Business Card</string>
+    <string name="portrait">Portrait</string>
+    <string name="landscape">Landscape</string>
 </resources>

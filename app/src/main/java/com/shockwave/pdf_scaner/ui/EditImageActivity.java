@@ -10,12 +10,6 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.itextpdf.text.BadElementException;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Image;
-import com.itextpdf.text.PageSize;
-import com.itextpdf.text.pdf.PdfWriter;
 import com.shockwave.pdf_scaner.R;
 import com.shockwave.pdf_scaner.adapter.FilterViewAdapter;
 import com.shockwave.pdf_scaner.adapter.ListImagePagerAdapter;
@@ -27,14 +21,9 @@ import com.shockwave.pdf_scaner.util.ParamUtils;
 import com.shockwave.pdf_scaner.util.RecyclerUtils;
 import com.shockwave.pdf_scaner.util.SPUtils;
 import com.shockwave.pdf_scaner.widget.DisableSwipeViewPager;
-import com.watermark.androidwm.utils.Constant;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import io.reactivex.Observable;
@@ -186,35 +175,64 @@ public class EditImageActivity extends BaseActivity implements View.OnClickListe
     @SuppressLint("CheckResult")
     private void exportPDF() {
         showProgressDialog();
-        Observable.just(listImagePagerAdapter.saveImage(viewPager))
+        Observable.just(listImagePagerAdapter.saveImagePath(viewPager))
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread()).subscribe(files -> {
-            System.out.println("FUKKKKKKKK" + files);
-            Observable.just(listImagePagerAdapter.convertPDF(files))
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(new Observer<Boolean>() {
-                        @Override
-                        public void onSubscribe(@NotNull Disposable d) {
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<ArrayList<String>>() {
+                    @Override
+                    public void onSubscribe(@NotNull Disposable d) {
+                    }
 
-                        }
+                    @Override
+                    public void onNext(@NotNull ArrayList<String> value) {
+                        Intent intent = new Intent(EditImageActivity.this, ResultActivity.class);
+                        intent.putStringArrayListExtra(ParamUtils.LINK, value);
+                        startActivity(intent);
+                    }
 
-                        @Override
-                        public void onNext(@NotNull Boolean aBoolean) {
-                            System.out.println("FUKKKKKKKK" + aBoolean);
-                        }
+                    @Override
+                    public void onError(@NotNull Throwable e) {
+                        dismissProgressDialog();
+                    }
 
-                        @Override
-                        public void onError(@NotNull Throwable e) {
-                            dismissProgressDialog();
-                        }
+                    @Override
+                    public void onComplete() {
+                        dismissProgressDialog();
+                    }
+                });
 
-                        @Override
-                        public void onComplete() {
-                            dismissProgressDialog();
-                        }
-                    });
-        });
+//        Observable.just(listImagePagerAdapter.saveImage(viewPager))
+//                .subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread()).subscribe(files -> {
+//            System.out.println("FUKKKKKKKK" + files);
+//            Observable.just(listImagePagerAdapter.convertPDF(files, this))
+//                    .subscribeOn(Schedulers.io())
+//                    .observeOn(AndroidSchedulers.mainThread())
+//                    .subscribe(new Observer<String>() {
+//                        @Override
+//                        public void onSubscribe(@NotNull Disposable d) {
+//
+//                        }
+//
+//                        @Override
+//                        public void onNext(@NotNull String aBoolean) {
+//                            System.out.println("FUKKKKKKKK" + aBoolean);
+//                            Intent intent = new Intent(EditImageActivity.this, ResultActivity.class);
+//                            intent.putExtra(ParamUtils.LINK, aBoolean);
+//                            startActivity(intent);
+//                        }
+//
+//                        @Override
+//                        public void onError(@NotNull Throwable e) {
+//                            dismissProgressDialog();
+//                        }
+//
+//                        @Override
+//                        public void onComplete() {
+//                            dismissProgressDialog();
+//                        }
+//                    });
+//        });
     }
 
     @Override

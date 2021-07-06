@@ -2,18 +2,22 @@ package com.shockwave.pdf_scaner.ui.fragment;
 
 import android.content.Intent;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
 
 import com.shockwave.pdf_scaner.R;
 import com.shockwave.pdf_scaner.base.BaseFragment;
-import com.shockwave.pdf_scaner.ui.setting.PageSizeActivity;
+import com.shockwave.pdf_scaner.ui.PageSizeActivity;
 import com.shockwave.pdf_scaner.util.ParamUtils;
+import com.shockwave.pdf_scaner.util.SPUtils;
 
 public class SettingFragment extends BaseFragment implements View.OnClickListener {
 
-    private Spinner spPageSize;
+    private RelativeLayout rlPageSize;
+    private AppCompatTextView txtPageSize;
     private AppCompatTextView txtLocation;
     private AppCompatTextView txtRate;
     private AppCompatTextView txtMore;
@@ -28,7 +32,8 @@ public class SettingFragment extends BaseFragment implements View.OnClickListene
 
     @Override
     protected void initView(View view) {
-        spPageSize = view.findViewById(R.id.spPageSize);
+        rlPageSize = view.findViewById(R.id.rl_page_size);
+        txtPageSize = view.findViewById(R.id.txtPageSize);
         txtLocation = view.findViewById(R.id.txtLocation);
         txtRate = view.findViewById(R.id.txtRate);
         txtMore = view.findViewById(R.id.txtMore);
@@ -40,6 +45,16 @@ public class SettingFragment extends BaseFragment implements View.OnClickListene
     @Override
     protected void initData() {
         txtLocation.setText(ParamUtils.PDF_FOLDER);
+        getSizePage();
+    }
+
+    private void getSizePage() {
+        String pageSelected = SPUtils.getString(getActivity(), ParamUtils.PAGE_SIZE);
+        if (pageSelected.isEmpty()) {
+            txtPageSize.setText("A4");
+        } else {
+            txtPageSize.setText(pageSelected);
+        }
     }
 
     @Override
@@ -49,7 +64,13 @@ public class SettingFragment extends BaseFragment implements View.OnClickListene
         txtShare.setOnClickListener(this);
         txtFeedback.setOnClickListener(this);
         txtPolicy.setOnClickListener(this);
-        getView().findViewById(R.id.rl_page_size).setOnClickListener(this);
+        rlPageSize.setOnClickListener(this);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        getSizePage();
     }
 
     @Override

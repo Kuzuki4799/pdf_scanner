@@ -1,6 +1,7 @@
 package com.shockwave.pdf_scaner.adapter;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -17,10 +18,12 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.PageSize;
+import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.shockwave.pdf_scaner.R;
 import com.shockwave.pdf_scaner.util.FileUtils;
 import com.shockwave.pdf_scaner.util.ParamUtils;
+import com.shockwave.pdf_scaner.util.SPUtils;
 import com.shockwave.pdf_scaner.widget.DisableSwipeViewPager;
 import com.watermark.androidwm.WatermarkBuilder;
 import com.watermark.androidwm.bean.WatermarkText;
@@ -164,8 +167,66 @@ public class ListImagePagerAdapter extends PagerAdapter {
         return null;
     }
 
-    public Boolean convertPDF(ArrayList<File> files) {
-        Document document = new Document(PageSize.A4, 38.0f, 38.0f, 50.0f, 38.0f);
+    public ArrayList<String> saveImagePath(DisableSwipeViewPager viewPager) {
+        FileOutputStream out = null;
+        ArrayList<String> listPath = new ArrayList<>();
+        try {
+            SaveSettings saveSettings = new SaveSettings.Builder().setClearViewsEnabled(false).setTransparencyEnabled(true).build();
+            for (int i = 0; i < listImage.size(); i++) {
+                PhotoEditorView photoEditorView = viewPager.getChildAt(i).findViewById(R.id.imgMain);
+                PhotoEditor mPhotoEditor = new PhotoEditor.Builder(viewPager.getContext(), photoEditorView).setPinchTextScalable(true).build();
+                File createFile = FileUtils.createOfferMoreFile(viewPager.getContext(), false, ParamUtils.jpgExtension);
+                mPhotoEditor.clearHelperBox();
+                String path = createFile.getPath();
+                File file = new File(path);
+                try {
+                    out = new FileOutputStream(file, false);
+                    photoEditorView.setDrawingCacheEnabled(true);
+                    Bitmap drawingCache = saveSettings.isTransparencyEnabled()
+                            ? BitmapUtil.removeTransparency(photoEditorView.getDrawingCache())
+                            : photoEditorView.getDrawingCache();
+                    drawingCache.compress(saveSettings.getCompressFormat(), saveSettings.getCompressQuality(), out);
+                    if (drawingCache.getByteCount() > 0) {
+                        listPath.add(file.getPath());
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            return listPath;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            closeFileStream(out);
+        }
+        return null;
+    }
+
+    private Rectangle getPageSize(Context context) {
+        String key = SPUtils.getString(context, ParamUtils.PAGE_SIZE);
+        switch (key) {
+            case "A3":
+                return PageSize.A3;
+            case "A5":
+                return PageSize.A5;
+            case "B4":
+                return PageSize.B4;
+            case "B5":
+                return PageSize.B5;
+            case "Letter":
+                return PageSize.LETTER;
+            case "Legal":
+                return PageSize.LEGAL;
+            case "Executive":
+                return PageSize.EXECUTIVE;
+            case "A4":
+            default:
+                return PageSize.A4;
+        }
+    }
+
+    public String convertPDF(ArrayList<File> files, Context context) {
+        Document document = new Document(getPageSize(context), 38.0f, 38.0f, 50.0f, 38.0f);
         try {
             File outputMediaFile = outMediaFilePDF();
             System.out.println("KKKKKKKKKK" + outputMediaFile);
@@ -182,13 +243,13 @@ public class ListImagePagerAdapter extends PagerAdapter {
                 document.add(image);
                 document.newPage();
             }
-            return true;
+            return outputMediaFile.getPath();
         } catch (DocumentException | IOException e) {
             e.printStackTrace();
         } finally {
             document.close();
         }
-        return false;
+        return "";
     }
 
     private void closeFileStream(Closeable closeable) {
